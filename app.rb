@@ -1,4 +1,4 @@
 require_relative "calculate.rb"
 
-start = Calculate.new
+start = Calculator.new
 start.which_calculator

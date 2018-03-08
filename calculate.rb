@@ -1,27 +1,24 @@
-class Calculate
+class Calculator
 	attr_accessor :calc_choice, :nums, :operator, :sum
-
-	def initialize
-	end
 
 	def do_calculation
 		@@nums.map! {|i| Integer(i)}
 	
 		if @@operator == "1"
 			sum = @@nums.inject(0){|sum,x| sum + x }
-			puts sum
+			puts "The answer is #{sum}"
 		elsif @@operator == "2"
 			sum = @@nums.inject(:*)
-			puts sum
+			puts "The answer is #{sum}"
 		elsif @@operator == "3"
 			sum = @@nums.inject(:/)
-			puts sum
+			puts "The answer is #{sum}"
 		elsif @@operator == "4"
 			sum = @@nums.reduce 0 {|total, n| @@nums[0] - total - n}
-			puts sum
+			puts "The answer is #{sum}"
 		elsif @@operator == "5"
 			sum = @@nums.inject(:**)
-			puts sum
+			puts "The answer is #{sum}"
 		else 
 			@@nums.each{|i| 
 			puts "The subtraction of #{i} is #{Math.sqrt(i)}." }
