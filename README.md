@@ -1,1 +1,0 @@
-# Sparta-ruby-calculator
